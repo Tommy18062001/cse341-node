@@ -5,5 +5,5 @@ const port = 3000
 app.use('/', require('./routes'))
 
 app.listen(port, ()=> {
-    console.log(`Example of listening on port ${port}`)
+    console.log(`Listening on port ${port}`)
 })
