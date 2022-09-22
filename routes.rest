@@ -3,3 +3,12 @@ GET http://localhost:3000
 
 ###
 GET http://localhost:3000/63233da7417740d6405fa901
+
+###
+POST http://localhost:3000/post
+
+###
+PUT http://localhost:3000/63233da7417740d6405fa901
+
+###
+DELETE http://localhost:3000/63295849ec83aa2993c5e0b4
