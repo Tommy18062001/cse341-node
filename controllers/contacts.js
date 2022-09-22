@@ -30,9 +30,9 @@ const getOneContact = async (req, res, next) => {
 const createContact = async (req, res, next) => {
   // create a template for a new contact
   const contact = new Contact({
-    firstName: "nathan",
-    lastName: "birtch",
-    email: "nathan@user.com",
+    firstName: "Tommy",
+    lastName: "Sylver",
+    email: "tommy@user.com",
     favoriteColor: "Red",
     birthday: "1/1/1998",
   });
@@ -54,11 +54,11 @@ const updateContact = async (req, res, next) => {
   // find the contact to update
   Contact.findOne({ _id: contactId })
     .then((contact) => {
-      contact.firstName = "nathan";
-      contact.lastName = "Birtch";
-      contact.email = "nathan@user.com";
+      contact.firstName = "Jennifer";
+      contact.lastName = "Sylvianne";
+      contact.email = "jenny@user.com";
       contact.favoriteColor = "blue";
-      contact.birthday = "1/1/1958";
+      contact.birthday = "1/1/2003";
 
       Contact.updateOne({ _id: contactId }, contact)
         .then((result) => {
