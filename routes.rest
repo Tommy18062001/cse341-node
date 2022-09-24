@@ -1,14 +1,14 @@
 ###
-GET http://localhost:3000
+GET http://localhost:3000/contacts
 
 ###
-GET http://localhost:3000/63233da7417740d6405fa902
+GET http://localhost:3000/contacts/63233da7417740d6405fa902
 
 ###
-POST http://localhost:3000/post
+POST http://localhost:3000/contacts
 
 ###
-PUT http://localhost:3000/63233da7417740d6405fa902
+PUT http://localhost:3000/contacts/63233da7417740d6405fa902
 
 ###
-DELETE http://localhost:3000/632bf5e4a76563efaa40e448
+DELETE http://localhost:3000/contacts/632bf5e4a76563efaa40e448

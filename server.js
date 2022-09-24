@@ -32,7 +32,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-.use('/', contactsRoute)
+.use('/contacts', contactsRoute)
 
 app.listen(port, ()=> {
     console.log(`Listening on port ${port}`)

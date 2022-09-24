@@ -8,7 +8,7 @@ routes.get('/', contactsController.getAllContact)
 routes.get('/:id', contactsController.getOneContact)
 
 // post request
-routes.post('/post', contactsController.createContact)
+routes.post('/', contactsController.createContact)
 
 // put request
 routes.put('/:id', contactsController.updateContact)
