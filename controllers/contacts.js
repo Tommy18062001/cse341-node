@@ -28,13 +28,14 @@ const getOneContact = async (req, res, next) => {
 
 // POST REQUEST
 const createContact = async (req, res, next) => {
+
   // create a template for a new contact
   const contact = new Contact({
-    firstName: "Tommy",
-    lastName: "Sylver",
-    email: "tommy@user.com",
-    favoriteColor: "Red",
-    birthday: "1/1/1998",
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday,
   });
 
   // mongodb method to save
@@ -54,11 +55,11 @@ const updateContact = async (req, res, next) => {
   // find the contact to update
   Contact.findOne({ _id: contactId })
     .then((contact) => {
-      contact.firstName = "Jennifer";
-      contact.lastName = "Sylvianne";
-      contact.email = "jenny@user.com";
-      contact.favoriteColor = "blue";
-      contact.birthday = "1/1/2003";
+      contact.firstName = req.body.firstName;
+      contact.lastName = req.body.lastName;
+      contact.email = req.body.email;
+      contact.favoriteColor = req.body.favoriteColor;
+      contact.birthday = req.body.birthday;
 
       Contact.updateOne({ _id: contactId }, contact)
         .then((result) => {
