@@ -5,7 +5,7 @@ const Contact = require("../modules/contact");
 const getAllContact = async (req, res, next) => {
   Contact.find()
     .then((contactList) => {
-      res.status(200).json({ contacts: contactList });
+      res.status(200).json(contactList);
     })
     .catch((error) => {
       res.status(500).json({ error: error });
@@ -19,7 +19,7 @@ const getOneContact = async (req, res, next) => {
 
   Contact.find({ _id: contactId })
     .then((contact) => {
-      res.status(200).json({ contact: contact });
+      res.status(200).json(contact);
     })
     .catch((error) => {
       res.status(500).json({ error: error });
@@ -41,7 +41,7 @@ const createContact = async (req, res, next) => {
   // mongodb method to save
   contact.save()
     .then((createdContact) => {
-      res.status(201).json({ contact: createdContact });
+      res.status(201).json(createdContact);
     })
     .catch((error) => {
       res.status(500).json({ error: error });
